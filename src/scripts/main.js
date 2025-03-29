@@ -30,6 +30,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    new Typed('#typed', {
+        strings: ["Backend Developer", "Android Enthusiast", "AI & LLM Specialist", "Tech Innovator"],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+    });
+
+    // Initialize Materialize Carousel
+    const elems = document.querySelectorAll('.carousel');
+    M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true
+    });
 });
 
 // Back-to-top button functionality

@@ -1,4 +1,6 @@
-/* General Styles */
+/* -----------------------------------
+   General Styles
+------------------------------------- */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,13 +10,35 @@ body {
     scroll-behavior: smooth;
 }
 
+/* -----------------------------------
+   Header & Navigation
+------------------------------------- */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Hero Section */
+nav {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+nav ul li a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li.active a {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+}
+
+/* -----------------------------------
+   Hero Section
+------------------------------------- */
 #hero {
     padding: 5rem 1rem;
     background: linear-gradient(to right, #42a5f5, #64b5f6);
@@ -44,7 +68,9 @@ header {
     background-color: #0d47a1;
 }
 
-/* Photos Section */
+/* -----------------------------------
+   Photos Section
+------------------------------------- */
 #photos {
     padding: 3rem 0;
     background-color: #f4f4f4;
@@ -59,8 +85,8 @@ header {
 .row {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Increased space between cards */
-    flex-wrap: wrap; /* Ensure cards wrap to the next row on smaller screens */
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -68,39 +94,35 @@ header {
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Increased width for larger cards */
-    height: 300px; /* Increased height to make it square */
+    width: 300px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Background color for empty space */
+    background-color: #f0f0f0;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* More pronounced hover effect */
+    transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-image {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the entire image fits within the square */
-    background-color: #f0f0f0; /* Background color for empty space */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .card:hover .card-image img {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .card-content {
@@ -115,15 +137,65 @@ header {
     color: #333;
 }
 
-/* Footer */
-footer {
-    padding: 1rem 0;
-    text-align: center;
-    color: #fff;
-    background-color: #333;
+/* -----------------------------------
+   Skills Section
+------------------------------------- */
+#skills {
+    padding: 4rem 0;
 }
 
-/* Quote Section */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #42a5f5;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.skill-icon {
+    padding: 1.5rem;
+}
+
+.skill-icon i {
+    font-size: 3rem;
+}
+
+.skill-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.skill-content h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #424242;
+}
+
+.skill-content p {
+    font-size: 0.9rem;
+    color: #757575;
+    margin: 0;
+}
+
+/* -----------------------------------
+   Quote Section
+------------------------------------- */
 #quote {
     padding: 3rem 1rem;
     background: linear-gradient(to right, #64b5f6, #42a5f5);
@@ -134,7 +206,6 @@ footer {
     font-size: 1.8rem;
     font-style: italic;
     font-weight: 500;
-    color: #fff;
     border-left: 5px solid #fff;
     padding-left: 1rem;
     margin: 0;
@@ -142,7 +213,9 @@ footer {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Parallax Section */
+/* -----------------------------------
+   Parallax Section
+------------------------------------- */
 .parallax-container {
     height: 500px;
     position: relative;
@@ -156,6 +229,9 @@ footer {
     opacity: 0.8;
 }
 
+/* -----------------------------------
+   Progress Bar
+------------------------------------- */
 .progress {
     background-color: #e0e0e0;
     height: 10px;
@@ -169,7 +245,19 @@ footer {
     transition: width 1s ease-in-out;
 }
 
-/* Back-to-Top Button */
+/* -----------------------------------
+   Footer
+------------------------------------- */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+/* -----------------------------------
+   Back-to-Top Button
+------------------------------------- */
 #back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -180,4 +268,22 @@ footer {
 
 #back-to-top.show {
     display: block;
+}
+
+/* -----------------------------------
+   Responsive Adjustments
+------------------------------------- */
+@media only screen and (max-width: 992px) {
+    .skill-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .skill-card {
+        margin-bottom: 1rem;
+    }
 }
