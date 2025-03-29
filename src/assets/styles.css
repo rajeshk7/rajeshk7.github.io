@@ -36,81 +36,12 @@ header nav ul li a {
     text-decoration: none;
 }
 
-#hero {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    color: #fff;
-    text-align: center;
-    padding: 5rem 1rem;
-}
-
-#hero .hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#hero h2 {
-    font-size: 2.5rem;
-    margin: 0 0 1rem;
-}
-
-#hero h2.black-text {
-    color: #000;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin: 0 0 2rem;
-}
-
-#hero .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #ff6347;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#hero .btn:hover {
-    background-color: #ff4500;
-}
-
 main {
     padding: 2rem;
 }
 
 section {
     margin-bottom: 2rem;
-}
-
-#photos {
-    text-align: center;
-}
-
-#photos .photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-#photos .photo-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#photos .photo-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
 }
 
 footer {
