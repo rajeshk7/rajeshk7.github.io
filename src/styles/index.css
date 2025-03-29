@@ -273,20 +273,33 @@ nav ul li.active a {
    Quote Section
 ------------------------------------- */
 #quote {
-    padding: 3rem 1rem;
-    background: linear-gradient(to right, #64b5f6, #42a5f5);
-    color: #fff;
+    padding: 3rem 0;
 }
 
 .fancy-quote {
-    font-size: 1.8rem;
     font-style: italic;
-    font-weight: 500;
-    border-left: 5px solid #fff;
-    padding-left: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 20px 40px;
     margin: 0;
-    line-height: 1.6;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-quote:before,
+.fancy-quote:after {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.fancy-quote:before {
+    top: -20px;
+    left: 0;
+}
+
+.fancy-quote:after {
+    bottom: -60px;
+    right: 0;
 }
 
 /* -----------------------------------

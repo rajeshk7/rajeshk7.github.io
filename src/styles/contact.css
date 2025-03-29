@@ -101,6 +101,39 @@ nav ul li.active a {
 }
 
 /* -----------------------------------
+   Quote Section
+------------------------------------- */
+#quote {
+    padding: 3rem 0;
+}
+
+.fancy-quote {
+    font-style: italic;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 20px 40px;
+    margin: 0;
+}
+
+.fancy-quote:before,
+.fancy-quote:after {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.fancy-quote:before {
+    top: -20px;
+    left: 0;
+}
+
+.fancy-quote:after {
+    bottom: -60px;
+    right: 0;
+}
+
+/* -----------------------------------
    Glass Card Effect
 ------------------------------------- */
 .glass-card {
