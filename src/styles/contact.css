@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Header styling */
 header {
     background-color: #333;
     color: #fff;
@@ -36,6 +38,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
+/* Main content styling */
 main {
     padding: 2rem;
 }
@@ -44,6 +47,7 @@ section {
     margin-bottom: 2rem;
 }
 
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
@@ -54,19 +58,12 @@ footer {
     bottom: 0;
 }
 
-/* Additional styles for about page */
-.experience-item, .education-item {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
+/* Styling for section headings */
 h2 {
     color: #ff7e5f;
 }
 
+/* Styling for unordered lists */
 ul {
     list-style-type: none;
     padding: 0;
