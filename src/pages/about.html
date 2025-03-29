@@ -65,11 +65,6 @@
             <div class="container center-align" data-aos="fade-up">
                 <h1>About Me</h1>
                 <p class="flow-text">Learn about my background, skills, and experience</p>
-                <div class="hero-waves">
-                    <div class="wave wave1"></div>
-                    <div class="wave wave2"></div>
-                    <div class="wave wave3"></div>
-                </div>
             </div>
         </section>
 
@@ -312,15 +307,11 @@
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Custom Scripts -->
-    <script src="../scripts/main.js"></script>
+    <script src="../scripts/rest.js"></script>
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Materialize components
-            var sidenav = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(sidenav);
-            
+        document.addEventListener('DOMContentLoaded', function() {            
             // Initialize AOS
             AOS.init({
                 duration: 800,

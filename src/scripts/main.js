@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
     } else {
-        backToTop.classList.remove('show');
+        backToTop.classList.remove('visible');
     }
 });
 
