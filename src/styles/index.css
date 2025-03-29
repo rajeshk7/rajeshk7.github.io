@@ -290,22 +290,6 @@ nav ul li.active a {
 }
 
 /* -----------------------------------
-   Parallax Section
-------------------------------------- */
-.parallax-container {
-    height: 500px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.parallax img {
-    object-fit: cover;
-    opacity: 0.8;
-}
-
-/* -----------------------------------
    Progress Bar
 ------------------------------------- */
 .progress {
@@ -424,4 +408,9 @@ body.dark-mode .section-title {
 
 #dark-mode-toggle i {
     color: #fff;
+}
+
+/* Dark mode toggle positioning */
+#nav-mobile li:last-child {
+    margin-left: 10px;
 }

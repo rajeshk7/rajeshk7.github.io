@@ -3,76 +3,224 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     scroll-behavior: smooth;
 }
 
-/* Header styling */
+/* -----------------------------------
+   Header & Navigation
+------------------------------------- */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
+nav {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+nav ul li a {
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1rem;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav ul li.active a {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
 }
 
-/* Main content styling */
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
+/* -----------------------------------
+   Contact Hero Section
+------------------------------------- */
+#contact-hero {
+    padding: 5rem 1rem;
+    background: linear-gradient(to right, #42a5f5, #64b5f6);
     color: #fff;
     text-align: center;
+}
+
+#contact-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------------
+   Contact Cards
+------------------------------------- */
+.contact-card {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.contact-card i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------------
+   Hobby Cards
+------------------------------------- */
+.hobby-card {
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+}
+
+.hobby-icon {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.hobby-icon i {
+    font-size: 4rem;
+    color: #1565c0;
+}
+
+/* -----------------------------------
+   Glass Card Effect
+------------------------------------- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* -----------------------------------
+   Section Titles
+------------------------------------- */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1565c0;
+}
+
+/* -----------------------------------
+   Section Styling
+------------------------------------- */
+.section {
+    padding: 4rem 0;
+}
+
+/* -----------------------------------
+   Footer
+------------------------------------- */
+.page-footer {
     padding: 1rem 0;
+    margin-top: 0;
+}
+
+/* -----------------------------------
+   Back-to-Top Button
+------------------------------------- */
+#back-to-top {
     position: fixed;
-    width: 100%;
-    bottom: 0;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 1000;
 }
 
-/* Styling for section headings */
-h2 {
-    color: #ff7e5f;
+#back-to-top.show {
+    display: block;
 }
 
-/* Styling for unordered lists */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* -----------------------------------
+   Dark Mode Styling
+------------------------------------- */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-ul li {
-    background: #ff7e5f;
-    color: #fff;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: 5px;
+body.dark-mode .card,
+body.dark-mode .card-panel,
+body.dark-mode .collection,
+body.dark-mode .collection-item {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+body.dark-mode .section.white,
+body.dark-mode .section.grey.lighten-4 {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .section-title {
+    color: #64b5f6;
+}
+
+body.dark-mode .hobby-icon {
+    background-color: #333;
+}
+
+body.dark-mode .hobby-icon i {
+    color: #64b5f6;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode label {
+    color: #aaa;
+}
+
+/* Dark mode toggle positioning */
+#nav-mobile li:last-child {
+    margin-left: 15px;
+}
+
+/* -----------------------------------
+   Responsive Adjustments
+------------------------------------- */
+@media only screen and (max-width: 992px) {
+    .contact-card, .hobby-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .contact-card, .hobby-card {
+        height: auto;
+        min-height: 200px;
+    }
 }
