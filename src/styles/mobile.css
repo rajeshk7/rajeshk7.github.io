@@ -1,0 +1,75 @@
+/* Styled Mobile Menu */
+.sidenav {
+    width: 280px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  /* Add a header to the sidenav */
+  .sidenav-header {
+    background: linear-gradient(135deg, #1565c0 0%, #64b5f6 100%);
+    padding: 25px 15px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .sidenav-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+  }
+  
+  .sidenav-header h4 {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  /* Style the menu items */
+  .sidenav li > a {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .sidenav li > a i {
+    margin-right: 15px;
+    color: #1565c0;
+  }
+  
+  .sidenav li > a:hover {
+    background-color: rgba(21, 101, 192, 0.05);
+    padding-left: 25px;
+  }
+  
+  .sidenav li.active > a {
+    border-left: 4px solid #1565c0;
+    background-color: rgba(21, 101, 192, 0.1);
+  }
+  
+  /* Dark mode support */
+  body.dark-mode .sidenav {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .sidenav li > a {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .sidenav li > a i {
+    color: #64b5f6;
+  }
+  
+  body.dark-mode .sidenav li > a:hover {
+    background-color: rgba(100, 181, 246, 0.05);
+  }
+  
+  body.dark-mode .sidenav li.active > a {
+    border-left: 4px solid #64b5f6;
+    background-color: rgba(100, 181, 246, 0.1);
+  }

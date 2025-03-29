@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/mobile.css">
     <!-- Favicon -->
     <link rel="icon" href="../assets/Icon.jpg" type="image/x-icon">
     <!-- Google Fonts -->
@@ -44,9 +45,16 @@
 
         <!-- Mobile Navigation Menu -->
         <ul class="sidenav" id="mobile-menu">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <!-- Sidenav Header -->
+            <div class="sidenav-header">
+                <img src="../assets/Icon.jpg" alt="Profile">
+                <h4>Rajesh Kumar Jha</h4>
+            </div>
+            <!-- Menu Items -->
+            <li><a href="../../index.html"><i class="material-icons">home</i>Home</a></li>
+            <li class="active"><a href="about.html"><i class="material-icons">person</i>About</a></li>
+            <li><a href="contact.html"><i class="material-icons">mail</i>Contact</a></li>
+            <li><a href="#" id="mobile-dark-toggle"><i class="material-icons">brightness_4</i>Toggle Theme</a></li>
         </ul>
     </header>
 
@@ -235,7 +243,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Quote Section -->
         <section id="quote" class="section blue darken-3 white-text">
             <div class="container center-align">

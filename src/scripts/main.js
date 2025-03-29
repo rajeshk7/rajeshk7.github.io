@@ -7,11 +7,8 @@ const backToTop = document.getElementById('back-to-top');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize sidenav for mobile
-    const sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenav);
-
-    const parallaxElems = document.querySelectorAll('.parallax');
-    M.Parallax.init(parallaxElems);
+    var sidenav = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(sidenav);
 
     // Initialize circular progress animations with tooltips
     const circles = document.querySelectorAll('.circle');
@@ -51,6 +48,21 @@ document.addEventListener('DOMContentLoaded', function () {
         fullWidth: true,
         indicators: true
     });
+
+    const mobileDarkToggle = document.getElementById('mobile-dark-toggle');
+    if (mobileDarkToggle) {
+        mobileDarkToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            body.classList.toggle('dark-mode');
+            
+            // Save preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    }
 });
 
 window.addEventListener('scroll', () => {
