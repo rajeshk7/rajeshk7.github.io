@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
@@ -33,6 +34,9 @@
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="src/pages/about.html">About</a></li>
                     <li><a href="src/pages/contact.html">Contact</a></li>
+                    <li><button id="dark-mode-toggle" class="btn-floating btn-small waves-effect waves-light">
+                        <i class="material-icons">brightness_4</i>
+                    </button></li>
                 </ul>
             </div>
         </nav>
@@ -48,9 +52,6 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="parallax-container">
-            <div class="parallax">
-                <img src="src/assets/hero-background.jpg" alt="Hero Background">
-            </div>
             <div class="container center-align">
                 <h1 class="white-text">Hi, I'm Rajesh Kumar Jha</h1>
                 <h4 class="white-text"><span id="typed"></span></h4>
@@ -66,8 +67,8 @@
             <div class="container">
                 <h2 class="center-align section-title">My Skills</h2>
                 <div class="row">
-                    <!-- Skill Card 1 -->
-                    <div class="col s12 m6 l3">
+                    <!-- Skill Cards -->
+                    <div class="col" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-card z-depth-2">
                             <div class="skill-icon blue darken-3">
                                 <i class="material-icons white-text">code</i>
@@ -78,8 +79,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Skill Card 2 -->
-                    <div class="col s12 m6 l3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="200">
                         <div class="skill-card z-depth-2">
                             <div class="skill-icon blue darken-3">
                                 <i class="material-icons white-text">android</i>
@@ -90,8 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Skill Card 3 -->
-                    <div class="col s12 m6 l3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="300">
                         <div class="skill-card z-depth-2">
                             <div class="skill-icon blue darken-3">
                                 <i class="material-icons white-text">language</i>
@@ -106,29 +105,43 @@
             </div>
         </section>
 
+        <section id="tech-stack" class="section white">
+            <div class="container">
+                <h2 class="center-align section-title" data-aos="fade-up">Tech Stack</h2>
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icons">
+                        <!-- Tech icons -->
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin"></div>
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"></div>
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+                        <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery Section -->
         <section id="gallery" class="section">
             <div class="container">
                 <h2 class="center-align section-title">Gallery</h2>
                 <div class="row">
-                    <!-- Gallery Image 1 -->
-                    <div class="col s12 m6 l3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="100">
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="src/assets/Img_1.JPG" alt="Photo 1">
                             </div>
                         </div>
                     </div>
-                    <!-- Gallery Image 2 -->
-                    <div class="col s12 m6 l3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="200">
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="src/assets/Img_2.JPG" alt="Photo 2">
                             </div>
                         </div>
                     </div>
-                    <!-- Gallery Image 3 -->
-                    <div class="col s12 m6 l3">
+                    <div class="col" data-aos="fade-up" data-aos-delay="300">
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="src/assets/Img_3.JPG" alt="Photo 3">
@@ -177,5 +190,12 @@
     <script src="src/scripts/main.js"></script>
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

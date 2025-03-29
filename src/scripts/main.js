@@ -1,3 +1,10 @@
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+// Check for saved theme preference
+const darkMode = localStorage.getItem('darkMode');
+// Back-to-top button functionality
+const backToTop = document.getElementById('back-to-top');
+
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize sidenav for mobile
     const sidenav = document.querySelectorAll('.sidenav');
@@ -46,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Back-to-top button functionality
-const backToTop = document.getElementById('back-to-top');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
         backToTop.classList.add('show');
@@ -58,4 +63,19 @@ window.addEventListener('scroll', () => {
 
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+if (darkMode === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Save preference
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', null);
+    }
 });
